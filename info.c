@@ -1,5 +1,7 @@
 /*
 * Name: Elton Emini
+* Course Section: 111
+* Assignment Name: Lab 9 System Calls
 * Date: 11/3/2025
 * Purpose: Provide system info using POSIX system calls
 */
@@ -17,16 +19,12 @@ int main(int argc, char* argv[])
 {
     struct timespec ts;
     struct utsname system_info;
-    
     // Allocate a buffer (an array) for the hostname.
     // Using HOST_NAME_MAX is the standard way.
     char hostname[HOST_NAME_MAX + 1];
 
     // 1. Current time in nanoseconds
     if (clock_gettime(CLOCK_REALTIME, &ts) == 0) {
-        // ts.tv_nsec is just the nanosecond part of the current second.
-        // For a unique value, you could combine ts.tv_sec and ts.tv_nsec,
-        // but the prompt specifically asks for nanoseconds.
         printf("Current time (ns part): %ld\n", ts.tv_nsec);
     }
 

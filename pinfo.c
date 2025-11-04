@@ -1,5 +1,7 @@
 /*
 * Name: Elton Emini
+* Course Section: 111
+* Assignment Name: Lab 9 System Calls
 * Date: 11/3/2025
 * Purpose: get process priority and scheduling info
 */
